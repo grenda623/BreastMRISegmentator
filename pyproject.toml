@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "breast-mri-segmentator"
+version = "0.1.0"
+description = "Open-source DCE-MRI breast / FGT / tumor segmentation toolkit (nnUNet-based, 4-channel kinetic input)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Renda Guo" },
+]
+keywords = ["breast MRI", "DCE-MRI", "segmentation", "nnUNet", "deep learning", "medical imaging"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "nnunetv2>=2.4",
+    "nibabel>=5.0",
+    "numpy>=1.24",
+    "dcm2niix>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "ruff>=0.1",
+]
+
+[project.scripts]
+breast-mri-segment = "breast_mri_segmentator.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/grenda623/BreastMRISegmentator"
+"Source"   = "https://github.com/grenda623/BreastMRISegmentator"
+"Weights (Zenodo)" = "https://doi.org/PENDING"
+"Issue tracker" = "https://github.com/grenda623/BreastMRISegmentator/issues"
+
+[tool.setuptools.packages.find]
+include = ["breast_mri_segmentator*"]
+exclude = ["tests*", "examples*", "scripts*", "slicer_extension*"]

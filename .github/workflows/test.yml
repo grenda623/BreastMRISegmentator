@@ -1,0 +1,36 @@
+# Continuous integration for BreastMRISegmentator.
+#
+# CI does NOT run nnU-Net inference (no GPU on GitHub runners). The test suite
+# covers the IO heuristics, manifest parsing, and CLI argparse only, so we
+# install just the lightweight test dependencies rather than the full
+# `nnunetv2` (+ torch) stack.
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ["3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "${{ matrix.python }}"
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install nibabel numpy pytest ruff
+      - name: Lint
+        run: ruff check breast_mri_segmentator tests
+      - name: Run tests
+        # The package imports nnunetv2 lazily inside segment(), so importing
+        # breast_mri_segmentator.io for the unit tests does not require it.
+        run: pytest -q tests

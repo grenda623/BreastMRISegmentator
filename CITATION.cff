@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use BreastMRISegmentator, please cite both the software and the companion paper."
+title: "BreastMRISegmentator"
+abstract: >-
+  Open-source automated segmentation of breast, fibroglandular tissue (FGT),
+  and tumor on dynamic contrast-enhanced breast MRI (DCE-MRI). Wraps a
+  pre-trained 3D nnU-Net (Exp4x) with a 4-channel kinetic input
+  (P0, P1, P1-P0, P_last-P1), trained on 1,280 multi-centre cases and
+  validated on six external cohorts.
+type: software
+authors:
+  - family-names: Guo
+    given-names: Renda
+    # orcid: "https://orcid.org/0000-0000-0000-0000"  # TODO: fill at release
+  - family-names: Moreno
+    given-names: Rodrigo
+    # orcid: "https://orcid.org/0000-0000-0000-0000"  # TODO: confirm with supervisor
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-01-01"  # TODO: set to actual release date
+repository-code: "https://github.com/grenda623/BreastMRISegmentator"
+keywords:
+  - breast MRI
+  - DCE-MRI
+  - segmentation
+  - nnU-Net
+  - deep learning
+  - medical imaging
+preferred-citation:
+  type: article
+  title: >-
+    BreastMRISegmentator: an open-source deep learning framework for
+    multi-structure segmentation in breast DCE-MRI
+  authors:
+    - family-names: Guo
+      given-names: Renda
+    - family-names: Moreno
+      given-names: Rodrigo
+  year: 2026
+  journal: "(preprint)"
+  # doi: "10.xxxx/xxxxx"  # TODO: fill once the paper has a DOI

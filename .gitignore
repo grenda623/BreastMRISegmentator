@@ -1,0 +1,39 @@
+# Build artefacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+._*
+
+# Project data — never commit these (large, sometimes restricted)
+*.nii
+*.nii.gz
+*.pth
+*.tar.gz
+weights_cache/
+nnUNet_raw/
+nnUNet_preprocessed/
+nnUNet_results/
+
+# Notebook checkpoints
+.ipynb_checkpoints/

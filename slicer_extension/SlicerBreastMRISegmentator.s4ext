@@ -1,0 +1,25 @@
+# Slicer Extension description file for the Extensions Index.
+# Format: https://github.com/Slicer/ExtensionsIndex
+#
+# TODO before submission: create the grenda623/SlicerBreastMRISegmentator repo,
+# pin scmrevision to the release commit, and add the icon/screenshot assets.
+
+scm git
+scmurl https://github.com/grenda623/SlicerBreastMRISegmentator
+scmrevision main
+
+depends NA
+build_subdirectory .
+
+homepage https://github.com/grenda623/SlicerBreastMRISegmentator
+contributors Renda Guo (KTH), Rodrigo Moreno (KTH)
+
+category Segmentation
+
+iconurl https://github.com/grenda623/SlicerBreastMRISegmentator/raw/main/BreastMRISegmentator/Resources/Icons/BreastMRISegmentator_full_icon.png
+
+description Fully automatic AI segmentation of breast, fibroglandular tissue (FGT) and tumor on DCE-MRI, based on the BreastMRISegmentator nnU-Net model (Exp4x, 4-channel kinetic input). Research use only.
+
+screenshoturls https://github.com/grenda623/SlicerBreastMRISegmentator/raw/main/Screenshots/1.png
+
+enabled 1
