@@ -32,6 +32,8 @@ This document describes the rollout for the first public release of **BreastMRIS
 
 DentalSegmentator deposited the trained nnU-Net model on Zenodo and cited it via DOI. We do the same.
 
+> **Hands-on, command-level steps:** see [`docs/zenodo_upload.md`](docs/zenodo_upload.md). The section below is the rationale + metadata reference.
+
 ### 2.1 What to upload
 A single tarball containing only Exp4x assets:
 
