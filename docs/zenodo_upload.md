@@ -140,10 +140,10 @@ ls -R "$BREAST_MRI_SEG_CACHE" | head
 
 - A **SHA256 mismatch** error here means the hash in `weights.py` is wrong
   (re-copy from step 0.1) or the download is corrupt.
-- If the URL 404s, confirm the download URL Zenodo actually serves
-  (`https://zenodo.org/records/<ID>/files/exp4x_for_maia.tar.gz`) matches the
-  `ZENODO_URL` template in `weights.py`; update the template if Zenodo changed
-  the `record` vs `records` path form.
+- If the URL 404s, confirm the download URL Zenodo actually serves matches the
+  `ZENODO_URL` template in `weights.py`, which uses the canonical
+  `https://zenodo.org/records/<ID>/files/exp4x_for_maia.tar.gz` form. If Zenodo
+  only serves the file at the `.../content` suffix for your deposit, append it.
 
 Then run the test suite (still all mocked, but confirms nothing broke):
 

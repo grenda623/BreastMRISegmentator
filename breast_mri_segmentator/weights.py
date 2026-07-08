@@ -12,7 +12,9 @@ from urllib.request import urlretrieve
 # the actual record ID and set ZENODO_FILE + SHA256_HASH.
 ZENODO_RECORD = "PENDING_RECORD_ID"
 ZENODO_FILE = "exp4x_for_maia.tar.gz"
-ZENODO_URL = f"https://zenodo.org/record/{ZENODO_RECORD}/files/{ZENODO_FILE}"
+# Zenodo's current file-download endpoint (the legacy singular "/record/" form
+# still redirects here, but we use the canonical "/records/" path directly).
+ZENODO_URL = f"https://zenodo.org/records/{ZENODO_RECORD}/files/{ZENODO_FILE}"
 SHA256_HASH = "PENDING_SHA256"
 
 # Layout inside the tarball:
