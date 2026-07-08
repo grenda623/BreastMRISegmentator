@@ -110,11 +110,15 @@ BreastMRISegmentator/
 │   ├── cli.py                breast-mri-segment CLI
 │   ├── io.py                 DICOM → NIfTI + 4-channel kinetic build
 │   └── weights.py            Zenodo download / cache
-├── scripts/                  Helper scripts (training, evaluation)
-├── examples/                 Notebook / shell example pipelines
-├── tests/                    Unit tests
-├── slicer_extension/         3D Slicer extension (planned)
-├── docs/                     Usage docs, results, paper plan
+├── scripts/                  Helper scripts (inference wrapper)
+├── examples/                 Example pipelines (demo notebook)
+├── tests/                    Unit tests (io, cli, weights)
+├── slicer_extension/         3D Slicer extension (Phase 2 scaffold)
+├── docs/                     Usage, results, training, citation
+├── .github/workflows/        CI (ruff + pytest)
+├── CITATION.cff              Machine-readable citation
+├── CODE_OF_CONDUCT.md
+├── CHANGELOG.md
 ├── pyproject.toml
 ├── LICENSE
 ├── README.md

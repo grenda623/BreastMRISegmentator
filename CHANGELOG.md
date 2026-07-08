@@ -22,6 +22,11 @@ All notable changes to BreastMRISegmentator are documented in this file. Follows
 - Contributor Covenant `CODE_OF_CONDUCT.md`.
 - 3D Slicer extension scaffold under `slicer_extension/` (Phase 2, not validated in Slicer): CMake build files, scripted module, GUI/logic skeleton delegating inference to the `breast-mri-segmentator` package, and a `.s4ext` index descriptor.
 - Slicer extension test scaffold (`Testing/`): fast dependency/Layout-B tests with `segment` mocked, plus a `@pytest.mark.slow` end-to-end case; wired into the module self-test via SlicerPythonTestRunner.
+- `scripts/run_inference.sh`: convenience wrapper around the `breast-mri-segment` CLI.
+- `ruff` and `pytest` configuration in `pyproject.toml` so local and CI runs are consistent.
+
+### Changed
+- Modernized type hints to PEP 604 syntax (`X | None`, `str | Path`).
 
 ## [0.1.0] - PENDING
 

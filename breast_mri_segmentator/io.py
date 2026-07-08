@@ -6,12 +6,11 @@ import re
 import shutil
 import subprocess
 from pathlib import Path
-from typing import Union
 
 import nibabel as nib
 import numpy as np
 
-PathLike = Union[str, Path]
+PathLike = str | Path
 
 # Patterns recognized as DCE phases in dcm2niix-converted filenames.
 # Two protocols seen in practice (Siemens TWIST-VIBE + dynaVIEWS).

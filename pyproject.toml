@@ -48,3 +48,18 @@ breast-mri-segment = "breast_mri_segmentator.cli:main"
 [tool.setuptools.packages.find]
 include = ["breast_mri_segmentator*"]
 exclude = ["tests*", "examples*", "scripts*", "slicer_extension*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+# The Slicer extension is a separate deliverable with its own (Slicer-runtime)
+# conventions; the parent CI lints only the package + tests.
+extend-exclude = ["slicer_extension"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = ["E501"]  # line length is advisory here, not a CI failure
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -10,19 +10,18 @@ import shutil
 import subprocess
 import tempfile
 from pathlib import Path
-from typing import Optional, Union
 
 from breast_mri_segmentator.io import build_4ch_kinetic, dicom_to_nifti
 from breast_mri_segmentator.weights import ensure_weights
 
-PathLike = Union[str, Path]
+PathLike = str | Path
 
 
 def segment(
     input_dir: PathLike,
     output_dir: PathLike,
     from_dicom: bool = False,
-    weights_dir: Optional[PathLike] = None,
+    weights_dir: PathLike | None = None,
     use_tta: bool = False,
     fold: int = 0,
 ) -> Path:

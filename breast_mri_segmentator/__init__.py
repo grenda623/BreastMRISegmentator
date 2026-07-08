@@ -20,4 +20,4 @@ __license__ = "Apache-2.0"
 
 # Re-exports
 from breast_mri_segmentator.api import segment  # noqa: F401
-from breast_mri_segmentator.io import dicom_to_nifti, build_4ch_kinetic  # noqa: F401
+from breast_mri_segmentator.io import build_4ch_kinetic, dicom_to_nifti  # noqa: F401
