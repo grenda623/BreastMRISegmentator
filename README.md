@@ -150,6 +150,7 @@ If you use BreastMRISegmentator in your research, please cite (preprint pending)
 | [`docs/results.md`](docs/results.md) | Cross-cohort benchmark tables and known failure modes. |
 | [`docs/training.md`](docs/training.md) | How the Exp4x model was trained and its intended scope. |
 | [`docs/zenodo_upload.md`](docs/zenodo_upload.md) | Operator checklist for depositing the weights on Zenodo and wiring in the DOI. |
+| [`docs/owner_release_todo.md`](docs/owner_release_todo.md) | Owner-only release action items (accounts, GPU, supervisor sign-off). |
 | [`examples/run_on_public_demo_case.ipynb`](examples/run_on_public_demo_case.ipynb) | End-to-end notebook on a synthetic demo case. |
 | [`release_plan.md`](release_plan.md) | GitHub + Zenodo + 3D Slicer rollout checklist. |
 

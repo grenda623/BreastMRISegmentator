@@ -24,6 +24,7 @@ All notable changes to BreastMRISegmentator are documented in this file. Follows
 - Slicer extension test scaffold (`Testing/`): fast dependency/Layout-B tests with `segment` mocked, plus a `@pytest.mark.slow` end-to-end case; wired into the module self-test via SlicerPythonTestRunner.
 - `scripts/run_inference.sh`: convenience wrapper around the `breast-mri-segment` CLI.
 - `docs/zenodo_upload.md`: operator checklist for depositing the Exp4x weights on Zenodo and wiring the DOI back into the package.
+- `docs/owner_release_todo.md`: owner-only release action items (accounts, GPU, supervisor sign-off).
 - `ruff` and `pytest` configuration in `pyproject.toml` so local and CI runs are consistent.
 
 ### Changed
